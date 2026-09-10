@@ -55,11 +55,15 @@ def main():
     choice = input("\nEnter your choice (1-7): ")
 
     if choice == "1":
-        pass
+        register_session()
     elif choice == "2":
         show_all_sessions()
     elif choice == "3":
         show_completed_sessions()
+    elif choice == "4":
+        search_sessions()
+    elif choice == "5":
+        sort_by_duration()
     elif choice == "6":
         show_study_time_stats()
     elif choice == "7":
@@ -74,7 +78,40 @@ def main():
 
 
 def register_session():
-    pass
+    clear_terminal()
+    print("Register a Study Session:\n")
+
+    while True:
+        topic = input("Enter a topic: ")
+        if not topic.strip():
+            print("Invalid input! Try again.\n")
+            continue
+        break
+
+    while True:
+        try:
+            duration = int(input("Session length (minutes): "))
+        except ValueError:
+            print("Invalid input! Try again.\n")
+            continue
+
+        if duration <= 0:
+            print("Duration must be a positive number! Try again.\n")
+            continue
+
+        break
+
+    new_session = {
+        "topic": topic,
+        "duration_minutes": duration,
+        "status": "planned",
+    }
+
+    try:   
+        STUDY_SESSIONS.append(new_session)
+        print("\nStudy session successfully created.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
 
 def print_sessions(session):
@@ -85,24 +122,64 @@ def print_sessions(session):
 
 def show_all_sessions():
     clear_terminal()
-    print("All Study Sessions:\n")
+
+    result = []
 
     for session in STUDY_SESSIONS:
-        print_sessions(session)
+        result.append(session)
+    
+    if len(result) == 0:
+        return print("Cannot find any study sessions.")
+    
+    print("All Study Sessions:\n")
+
+    for r in result:
+        print_sessions(r)
 
 
 def show_completed_sessions():
     clear_terminal()
-    print("All Completed Study Sessions:\n")
+
+    result = []
 
     for sessoin in STUDY_SESSIONS:
         if sessoin['status'] == "completed":
-            print_sessions(sessoin)
+            result.append(sessoin)
+
+    if len(result) == 0:
+        return print("Cannot find any completed study sessions.")
+
+    print("All Completed Study Sessions:\n")
+
+    for r in result:
+        print_sessions(r)
 
 
+def search_sessions():
+    clear_terminal()
+    search = input("Search for a study session: ").lower()
+
+    result = []
+
+    for session in STUDY_SESSIONS:
+        topic = session['topic'].lower()
+        if search in topic:
+            result.append(session)
+
+    print(f'\nFound {len(result)} sessions matching "{search}"\n')
+
+    for r in result:
+        print_sessions(r)
 
 
+def sort_by_duration():
+    clear_terminal()
+    print("All Sessions Sorted By Durration (longest-shortest):\n")
 
+    sorted_sessions = sorted(STUDY_SESSIONS, key=lambda session: session['duration_minutes'], reverse=True)
+
+    for session in sorted_sessions:
+        print_sessions(session)
 
 
 def show_study_time_stats():
@@ -132,14 +209,6 @@ def show_study_time_stats():
 
     print(f"Total Study Time: {total_txt}")
     print(f"Typical Session: {avg_txt}")
-
-
-
-
-
-
-
-
 
 
 if __name__ == "__main__":

@@ -13,3 +13,7 @@ Her bruker jeg AI for å generere dummy data. Dette er fordi det tar mye kortere
 Her bruker jeg AI for å lage meg en mal da jeg ble usikker å hvor komplisert oppgaven skulle være.
 
 ![alt text](image-1.png)
+
+## Oppgave 3:
+
+Ingen bruk av Ai her.

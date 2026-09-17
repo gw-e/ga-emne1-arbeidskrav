@@ -1,0 +1,36 @@
+SUPPORT-RAPPORT
+================
+
+GYLDIGE HENDVENDELSER:
+----------------------
+Totalt antall gyldige henvendelser: 15
+
+Antall henvendelser per kategori:
+- innlogging: 4
+- programvare: 4
+- nettverk: 2
+- utstyr: 5
+
+TIDSBRUK:
+---------
+Samlet tidsbruk: 466 minutter
+Gjennomsnittlig tidsbruk: 31.1 minutter
+
+LØSTE OG ULØSTE HENVENDELSER:
+------------------------------
+Løste: 9
+Uløste: 6
+
+KATEGORIEN MED FLEST HENVENDELSER:
+-----------------------------------
+utstyr: 5 henvendelser
+
+ULØSTE HENVENDELSER:
+--------------------
+Sortert etter tidsbruk, mest tidkrevende først:
+- utstyr: 63 minutter
+- utstyr: 55 minutter
+- programvare: 48 minutter
+- programvare: 42 minutter
+- utstyr: 39 minutter
+- nettverk: 35 minutter

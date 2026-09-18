@@ -28,6 +28,6 @@ Her brukte jeg AI til å generere en mal for raporten. Dette gjorde jeg da jeg v
 
 ![alt text](image-3.png)
 
-Her på oppgave 4.4 bruker jeg AI til å formattere svaret mitt på riktig måte. Jeg har allerede løst og endret i kodeblokken selv, og hadde bare skrevet ned mye kommentarer i koden med en kort forklaring til meg selv. Ved å bruke AI her så blir formateringen av oppgaven profesjonell uten at AI løser selve oppgaven.
+Her på oppgave 4.4 bruker jeg AI til å formattere svaret mitt på riktig måte. Jeg har allerede løst og endret i kodeblokken selv, og hadde bare skrevet ned mye kommentarer i koden med en kort forklaring til meg selv. Ved å bruke AI her så blir formateringen av oppgaven profesjonell uten at AI løser selve oppgaven. Kunne ikke bare klippe og lime her da AI ikke kom opp med riktig formatering somt "##" for overskrift og "`blokk`" for blokker og slikt.
 
 ![alt text](image-4.png)

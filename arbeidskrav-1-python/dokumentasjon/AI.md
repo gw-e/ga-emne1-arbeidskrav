@@ -27,3 +27,7 @@ Sleit med å finne ut av hvordan jeg skulle sjekke gjennom hver rad i dataen, s�
 Her brukte jeg AI til å generere en mal for raporten. Dette gjorde jeg da jeg var usikker på hvordan jeg skulle formatere det, og ved å bruke AI så tar det mye kortere tid og blir formatert på en ordentlig måte.
 
 ![alt text](image-3.png)
+
+Her på oppgave 4.4 bruker jeg AI til å formattere svaret mitt på riktig måte. Jeg har allerede løst og endret i kodeblokken selv, og hadde bare skrevet ned mye kommentarer i koden med en kort forklaring til meg selv. Ved å bruke AI her så blir formateringen av oppgaven profesjonell uten at AI løser selve oppgaven.
+
+![alt text](image-4.png)

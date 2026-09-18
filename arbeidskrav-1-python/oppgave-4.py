@@ -100,6 +100,7 @@ def main():
     # change 2: Changed variable name "total" to "minutes". makes more sence considering what it gets. Also changed variable name "requests" and "request" to "inquiries" and "inquiry" because that is the correct tranlation from "henvendelser og henvendelse"
     # change 3: Switched out the print(minutes) with "total_minutes += minutes". what this does is plusses the minutes it gets from the inquiry on to the total_minutes variable, and declar it as the sum of those.
     # Change 4: To test if the output (184) was correct i stored the current value of total_minutes in a variable declared above the calculation, then added an if statement the prints the mattestykke and if its true or false. This way we cound chect if the result trully wass the sum of all the minutes.
+    # change 5: added try/except so that the program doesnt crash in errors. and also added int() on inquiry["minutes"] since the function allows both a number and a number in a string, so to fix that i had to only allow it to be integer.
 
 
 # print(f"+ {minutes} = {total_minutes}")   
@@ -109,8 +110,11 @@ def sum_resolved_minutes(inquiries: list[dict[str, str | int]]) -> int:
     total_minutes = 0
     for inquiry in inquiries:
         if inquiry["is_resolved"] == "yes":
-            minutes = inquiry["minutes"]
-            total_minutes += minutes
+            try:
+                minutes = int(inquiry["minutes"])
+                total_minutes += minutes
+            except (ValueError, TypeError):
+                continue
     return total_minutes
 
 
@@ -186,14 +190,17 @@ def sum_resolved_minutes(inquiries: list[dict[str, str | int]]) -> int:
 #     return total_minutes
 
 
-# FINAL ANSWER:
+# FINAL ANSWER: After change 5:
 
 # def sum_resolved_minutes(inquiries: list[dict[str, str | int]]) -> int:
 #     total_minutes = 0
 #     for inquiry in inquiries:
 #         if inquiry["is_resolved"] == "yes":
-#             minutes = inquiry["minutes"]
-#             total_minutes += minutes
+#             try:
+#                 minutes = int(inquiry["minutes"])
+#                 total_minutes += minutes
+#             except (ValueError, TypeError):
+#                 continue
 #     return total_minutes
 
 

@@ -183,7 +183,7 @@ minutes = int(inquiry["minutes"])
 
 Da blir for eksempel `"60"` gjort om til `60`.
 
-Jeg la også til en målrettet try/except rundt konverteringen:
+Jeg la også til en målrettet `try/except` rundt konverteringen:
 
 ```
 try:
@@ -195,9 +195,11 @@ except (ValueError, TypeError):
 
 `ValueError` kan oppstå dersom verdien ikke kan konverteres til et heltall, for eksempel `"abc"`.
 
+`TypeError` kan oppstå dersom verdien har en type som ikke kan brukes av `int()`.
+
 Jeg bruker ikke en tom `except`, fordi det ville skjult alle typer feil. Her håndterer jeg bare de feilene som kan oppstå ved konverteringen.
 
-### Endelig løsning
+### Løsning
 
 ```
 def sum_resolved_minutes(inquiries: list[dict[str, str | int]]) -> int:

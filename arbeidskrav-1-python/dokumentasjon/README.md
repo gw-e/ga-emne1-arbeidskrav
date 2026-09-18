@@ -19,7 +19,7 @@ Jeg valgte å legge til dataen i en array med flere dictionaries. Dette er fordi
 
 ### Kilder:
 
-**Tittel:** datetime — Basic date and time types
+**Tittel:** datetime - Basic date and time types
 **Nettadresse:** https://docs.python.org/3/library/datetime.html
 
 ## Oppgave 4.4 - Finn og rett feil

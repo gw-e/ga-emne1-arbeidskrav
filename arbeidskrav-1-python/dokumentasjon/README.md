@@ -213,3 +213,55 @@ def sum_resolved_minutes(inquiries: list[dict[str, str | int]]) -> int:
                 continue
     return total_minutes
 ```
+
+## Oppgave 5 - Miniprosjekt: aktivitetsplanlegger
+
+### Om programmet
+
+Activity Planner Pro er et konsollbasert program for å registrere og
+administrere aktiviteter.
+
+Programmet lar brukeren:
+
+- registrere aktiviteter
+- vise aktiviteter
+- søke etter aktiviteter
+- filtrere etter status
+- sortere etter dato eller varighet
+- markere aktiviteter som fullført
+- vise statistikk
+- lagre aktiviteter til fil
+- lese aktiviteter fra fil
+
+### Hvordan programmet brukes
+
+### Filstruktur
+
+- forlklar filstruktur. filer i data mappen, oppgave-5.py i arbeidsmappen.
+
+skriv slikt:
+
+- `oppgave-5.py` – hovedprogrammet og menyen.
+- `activity.py` – inneholder Activity-klassen.
+- `activities.json` – datafil som brukes til å lagre aktiviteter.
+- `README.md` – dokumentasjon av prosjektet.
+
+### Viktige valg
+
+- velger å ha class Activity i en annen fil, fordi det gjør det mere oversiktelig.
+- vleger json fil for lagrede aktiviteter, fordi det er brukt mye og har format som er lett og lese/skrive til og inneholder ting som lister og dicts by nature.
+- velger å ha med python sin name = main greie her. fordi det er bedre for apper med flere funcsjoner og en hovefungsjon som kjører de andre.
+- velger å clear terminalen fordi det gjir den en mere app lignende følelse + det er mye mere brukervennlig da man ikke ser historien. blir en faktisk gui lignende.
+- velger å bruke while true looper for menyen og error meldingene istede for å kalle funksjonen på nytt fordi ... (grunn)
+
+de som blir brukt:
+
+- jeg velger å ha en classe Activity i egen fil fordi...
+- jeg velger å bruke json fil som datafil fordi...
+-
+
+### Testing
+
+### Kjente feil
+
+### Mulige forbedringer

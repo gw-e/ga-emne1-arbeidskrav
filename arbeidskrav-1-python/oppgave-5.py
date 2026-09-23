@@ -59,6 +59,9 @@ def main():
         elif choice == "8":
             save_activities()
 
+        elif choice == "9":
+            load_activities()
+
         elif choice == "10":
             clear_terminal()
             exit()
@@ -297,7 +300,39 @@ def save_activities():
     except PermissionError:
         print("Error: Could not write to file.")
 
+
+def load_activities():
+    clear_terminal()
+    print("Loading activities...\n")
+
+    global ACTIVITIES
+
+    path = Path(__file__).parent / "data" / "activities.json"
+    try:
+        with open(path, "r", encoding="utf-8") as file:
+            data = json.load(file)
+
+        ACTIVITIES = []
+
+        for activity_data in data:
+            activity = Activity(
+                activity_data["title"],
+                activity_data["category"],
+                activity_data["date"],
+                activity_data["estimated_minutes"],
+                activity_data["status"]
+            )
+
+            ACTIVITIES.append(activity)
+
+        print("Activities successfully loaded.")
     
+    except FileNotFoundError:
+        print("Error: File not found.")
+
+
+
+
 
 
 

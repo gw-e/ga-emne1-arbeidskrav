@@ -4,6 +4,7 @@ from datetime import datetime
 from pathlib import Path
 import json
 
+
 ACTIVITIES = []
 
 
@@ -72,6 +73,7 @@ def main():
 
         input("\nPress enter to go back to menu: ")
         continue
+
 
 def add_activity():
     clear_terminal()
@@ -259,7 +261,7 @@ def complete_activity():
 
         except ValueError:
             print("\nPlease enter a number.\n")
-    
+
 
 def show_statistics():
     clear_terminal()
@@ -329,11 +331,6 @@ def load_activities():
     
     except FileNotFoundError:
         print("Error: File not found.")
-
-
-
-
-
 
 
 if __name__ == "__main__":

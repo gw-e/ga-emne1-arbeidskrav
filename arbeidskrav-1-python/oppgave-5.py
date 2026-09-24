@@ -46,7 +46,7 @@ def main():
             search_activities()
 
         elif choice == "4":
-            filter_avtivities()
+            filter_activities()
 
         elif choice == "5":
             sort_activities()
@@ -167,7 +167,7 @@ def search_activities():
         print_activity(r)
 
 
-def filter_avtivities():
+def filter_activities():
     clear_terminal()
     print("Filter activities by status:\n")
 

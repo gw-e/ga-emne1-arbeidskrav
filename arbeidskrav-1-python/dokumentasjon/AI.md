@@ -31,3 +31,9 @@ Her brukte jeg AI til å generere en mal for raporten. Dette gjorde jeg da jeg v
 Her på oppgave 4.4 bruker jeg AI til å formattere svaret mitt på riktig måte. Jeg har allerede løst og endret i kodeblokken selv, og hadde bare skrevet ned mye kommentarer i koden med en kort forklaring til meg selv. Ved å bruke AI her så blir formateringen av oppgaven profesjonell uten at AI løser selve oppgaven. Kunne ikke bare klippe og lime her da AI ikke kom opp med riktig formatering somt "##" for overskrift og "`blokk`" for blokker og slikt.
 
 ![alt text](image-4.png)
+
+## Oppgave 5:
+
+Brukte AI her til å gi meg en bedre forståelse av oppgaven og hva jeg skulle gjøre.
+
+Brukte også AI til å gjøre om stikkord jeg hadde i readme til tekst for dokumenteringen. Liker å bruke stikkord for å skrive ned ting da jeg får mere av det jeg tenker fortere ned på papir og slepper å tenke på at teksten skal være gramatisk riktig, noe jeg kan overlate til AI, som formaterer stikkordene mine til avsnitt som gir mening.

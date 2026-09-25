@@ -1,16 +1,9 @@
 [
     {
-        "title": "test",
-        "category": "test",
-        "date": "12.04.2026",
-        "estimated_minutes": 34,
-        "status": "planned"
-    },
-    {
-        "title": "test1",
-        "category": "test1",
-        "date": "12.04.2027",
-        "estimated_minutes": 125,
+        "title": "innebandy kamp",
+        "category": "innebandy",
+        "date": "27.09.2026",
+        "estimated_minutes": 120,
         "status": "completed"
     }
 ]

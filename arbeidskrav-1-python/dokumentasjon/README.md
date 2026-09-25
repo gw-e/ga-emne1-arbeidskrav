@@ -434,3 +434,7 @@ Det finnes flere ting som kunne blitt forbedret dersom programmet skulle videreu
 - Gi brukeren mulighet til å sortere varighet både stigende og synkende.
 - Validere at datoen ikke ligger i fortiden dersom dette skulle være et krav.
 - Forbedre søkefunksjonen med flere søkemuligheter.
+
+## Git:
+
+lenke til repo: https://github.com/gw-e/ga-emne1-arbeidskrav

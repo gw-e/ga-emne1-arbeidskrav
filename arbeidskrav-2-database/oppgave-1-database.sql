@@ -1,6 +1,9 @@
 -- Oppgave 1:
 
+DROP DATABASE IF EXISTS nettbutikk;
+
 CREATE DATABASE nettbutikk;
+
 USE nettbutikk;
 
 CREATE TABLE customers (

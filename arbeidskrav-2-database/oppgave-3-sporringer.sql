@@ -269,3 +269,150 @@ WHERE category = 'Accessories';
 SELECT product_id, product_name, price
 FROM products
 WHERE category = 'Accessories';
+
+
+-- 5. Lagerpåfylling:
+
+SELECT *
+FROM products
+WHERE stock < 15;
+
+UPDATE products
+SET stock = stock + 20
+WHERE stock < 15;
+
+
+-- 6. Endre flere verdier:
+
+SELECT *
+FROM products
+WHERE product_name = 'Gaming headset';
+-- id: 7
+
+UPDATE products
+SET price = price * 1.15,
+    stock = stock + 10
+WHERE product_id = 7;
+
+
+-- 7. Oppdater ordrestatus:
+
+SELECT *
+FROM orders
+WHERE status = 'Shipped'
+  AND order_date < '2025-08-10';
+
+UPDATE orders
+SET status = 'Delivered'
+WHERE status = 'Shipped'
+  AND order_date < '2025-08-10';
+
+SELECT *
+FROM orders
+WHERE status = 'Delivered'
+  AND order_date < '2025-08-10';
+
+
+-- 8. Opprett og slett testdata:
+
+-- legg til dataen
+
+INSERT INTO customers
+    (first_name, last_name, email, city, registered_date)
+VALUES
+    ('Test', 'Customer', 'testcustomer@example.com','Oslo', CURDATE());
+
+INSERT INTO products
+    (product_name, category, price, stock)
+VALUES
+    ('Test Product', 'Accessories', 100.00, 10);
+
+SELECT customer_id
+FROM customers
+WHERE first_name = 'Test'
+  AND last_name = 'Customer';
+-- customer_id : 10
+
+SELECT product_id
+FROM products
+WHERE product_name = 'Test Product';
+-- product_id: 14
+
+INSERT INTO orders
+    (customer_id, product_id, quantity, order_date, status)
+VALUES
+    (10, 14, 1, CURDATE(), 'Processing');
+
+-- kontroller at dataen ble laget
+
+SELECT
+    customers.first_name,
+    customers.last_name,
+    products.product_name,
+    orders.quantity,
+    orders.order_date,
+    orders.status
+FROM orders
+JOIN customers
+    ON orders.customer_id = customers.customer_id
+JOIN products
+    ON orders.product_id = products.product_id
+WHERE customers.email = 'testcustomer@example.com'
+  AND products.product_name = 'Test Product';
+
+-- 1. Slett bestillingen først fordi den refererer til kunden og produktet med fremmednøkler.
+DELETE FROM orders
+WHERE customer_id = 10
+  AND product_id = 14;
+
+-- 2. Deretter slett produktet fordi bestillingen ikke lenger refererer til produktet.
+DELETE FROM products
+WHERE product_id = 14;
+
+-- 3. Deretter slett kunden fordi bestillingen ikke lenger refererer til kunden.
+DELETE FROM customers
+WHERE customer_id = 10;
+
+
+-- 9: Bruk en transaksjon:
+
+-- Velger en random kunde
+SELECT *
+FROM customers;
+-- id: 7
+
+-- Velger et random produkt
+SELECT *
+FROM products;
+-- id: 5
+
+START TRANSACTION;
+
+INSERT INTO orders
+    (customer_id, product_id, quantity, order_date, status)
+VALUES
+    (7, 5, 1, CURDATE(), 'Processing');
+
+UPDATE products
+SET stock = stock - 1
+WHERE product_id = 5;
+
+SELECT *
+FROM orders
+WHERE customer_id = 10
+  AND product_id = 5
+ORDER BY order_id DESC
+LIMIT 1;
+
+SELECT *
+FROM products
+WHERE product_id = 5;
+
+COMMIT;
+
+-- COMMIT lagrer begge endringene permanent.
+-- ROLLBACK angre begge endringene dersom COMMIT ikke er kjørt.
+-- Transaksjoner gjør at relaterte endringer behandles samlet og samtidig,
+-- slik at bestillingen og lagerbeholdningen forblir konsistente
+-- og man unngår feil ved spørringer eller endringer som skjer
+-- imellom de relaterte endringene.

@@ -11,3 +11,8 @@ Jeg brukte KI til å generere SQL-kode for å sette inn data i tabellene i datab
 ## Oppgave 3 - SELECT og utforsking av data
 
 Her brukte jeg AI som fasitsvar etter jeg selv gjorde oppgavene. Dette var fordi mange av spørringene var litt vanskelig. Derfor var det greit å kunne lene seg på en fasit når jeg satt fast eller bare for å dobbelsjekke svarene.
+
+
+## Oppgave 4 - INSERT, UPDATE, DELETE og transaksjoner
+
+Samme som på oppgave 3, he brukte jeg AI som fasitsvar etter jeg selv ga oppgaven et forsøk. Trengte ikke å gjøre dette må så mange oppgaver her som i oppgave 3, men det var greit å få vite om løsningen min var correct på det vanskelige delene. AI hjalp også til med omformulering av forklarelser da jeg ikke alltids er god med ord og kan være greit at andre fårstår det jeg har skrevet ned også.
